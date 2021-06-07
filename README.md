@@ -20,7 +20,7 @@ The network connection can be either a UNIX domain socket (Linux only) or TCP so
 ### Through the command line
 
 ```
-$ python cli.py 4 start
+$ python cocomm.py 4 start
 ```
 
 ### From a file
@@ -35,13 +35,13 @@ First create a file containing your commands. For example, `mycommands.txt`:
 The commands will be executed line by line:
 
 ```
-$ python cli.py -f mycommands.txt
+$ python cocomm.py -f mycommands.txt
 ```
 
 ### From stdin
 
 ```
-$ python cli.py
+$ python cocomm.py
 4 start
 ```
 
@@ -54,7 +54,7 @@ The appliction uses will by default use a Unix domain socket at `/tmp/CO_command
 You can override that socket file:
 
 ```
-$ python cli.py -s /tmp/mysocket
+$ python cocomm.py -s /tmp/mysocket
 ```
 
 ### TCP socket
@@ -63,5 +63,5 @@ For remote execution or for Windows machines this option comes in handy.
 By default port 60000 is used but both hostname/ip and port can be used defined:
 
 ```
-$ python cli.py -t 192.168.0.10 -p 5000
+$ python cocomm.py -t 192.168.0.10 -p 5000
 ```
